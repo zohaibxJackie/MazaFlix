@@ -1,0 +1,416 @@
+[
+    {
+        "title": "Dune: Part Two",
+        "release_date": "2024-11-15",
+        "genre": "Sci-Fi, Adventure",
+        "director": "Denis Villeneuve"
+    },
+    {
+        "title": "Avatar: The Way of Water",
+        "release_date": "2024-12-20",
+        "genre": "Sci-Fi, Adventure",
+        "director": "James Cameron"
+    },
+    {
+        "title": "John Wick: Chapter 4",
+        "release_date": "2024-03-22",
+        "genre": "Action, Thriller",
+        "director": "Chad Stahelski"
+    },
+    {
+        "title": "Fast X",
+        "release_date": "2024-05-19",
+        "genre": "Action, Thriller",
+        "director": "Louis Leterrier"
+    },
+    {
+        "title": "Mission: Impossible - Dead Reckoning Part One",
+        "release_date": "2024-07-12",
+        "genre": "Action, Thriller",
+        "director": "Christopher McQuarrie"
+    },
+    {
+        "title": "The Hunger Games: The Ballad of Songbirds and Snakes",
+        "release_date": "2024-11-17",
+        "genre": "Sci-Fi, Adventure",
+        "director": "Francis Lawrence"
+    },
+    {
+        "title": "Spider-Man: Across the Spider-Verse (Part One)",
+        "release_date": "2024-06-21",
+        "genre": "Animation, Action, Adventure",
+        "director": "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson"
+    },
+    {
+        "title": "Godzilla x Kong: The New Empire",
+        "release_date": "2024-03-15",
+        "genre": "Sci-Fi, Action, Adventure",
+        "director": "Adam Wingard"
+    },
+    {
+        "title": "The Marvels",
+        "release_date": "2024-07-26",
+        "genre": "Sci-Fi, Action, Adventure",
+        "director": "Nia DaCosta"
+    },
+    {
+        "title": "Blade",
+        "release_date": "2024-09-06",
+        "genre": "Action, Horror",
+        "director": "Bassam Tariq"
+    },
+    {
+        "title": "Indiana Jones and the Dial of Destiny",
+        "release_date": "2024-06-30",
+        "genre": "Action, Adventure",
+        "director": "James Mangold"
+    },
+    {
+        "title": "Dungeons & Dragons: Honor Among Thieves",
+        "release_date": "2024-03-01",
+        "genre": "Fantasy, Adventure, Comedy",
+        "director": "Jonathan Goldstein, John Francis Daley"
+    },
+    {
+        "title": "The Little Mermaid",
+        "release_date": "2024-05-24",
+        "genre": "Fantasy, Musical",
+        "director": "Rob Marshall"
+    },
+    {
+        "title": "Wicked: Part One",
+        "release_date": "2024-11-27",
+        "genre": "Fantasy, Musical",
+        "director": "Jon M. Chu"
+    },
+    {
+        "title": "Scream VI",
+        "release_date": "2024-03-14",
+        "genre": "Horror, Mystery",
+        "director": "Matt Bettinelli-Olpin, Tyler Gillett"
+    },
+    {
+        "title": "The Exorcist: Believer",
+        "release_date": "2024-10-13",
+        "genre": "Horror",
+        "director": "David Gordon Green"
+    },
+    {
+        "title": "The Boogeyman",
+        "release_date": "2024-06-02",
+        "genre": "Horror",
+        "director": "Rob Savage"
+    },
+    {
+        "title": "Borderlands",
+        "release_date": "2024-08-09",
+        "genre": "Action, Sci-Fi, Adventure",
+        "director": "Eli Roth"
+    },
+    {
+        "title": "The Fall Guy",
+        "release_date": "2024-07-19",
+        "genre": "Action, Comedy",
+        "director": "McG"
+    },
+    {
+        "title": "Challengers",
+        "release_date": "2024-09-15",
+        "genre": "Drama, Romance, Comedy",
+        "director": "Luca Guadagnino"
+    },
+    {
+        "title": "The Killer",
+        "release_date": "2024-11-13",
+        "genre": "Action, Thriller",
+        "director": "David Fincher"
+    },
+    {
+        "title": "Napoleon",
+        "release_date": "2024-11-22",
+        "genre": "Biography, Drama, War",
+        "director": "Ridley Scott"
+    },
+    {
+        "title": "Killers of the Flower Moon",
+        "release_date": "2024-10-25",
+        "genre": "Crime, Drama, Western",
+        "director": "Martin Scorsese"
+    },
+    {
+        "title": "Joker: Folie à Deux",
+        "release_date": "2024-10-04",
+        "genre": "Psychological Thriller",
+        "director": "Todd Phillips"
+    },
+    {
+        "title": "Dune: Part Two",
+        "release_date": "2024-11-15",
+        "genre": "Sci-Fi, Adventure",
+        "director": "Denis Villeneuve"
+    },
+    {
+        "title": "Avatar: The Way of Water",
+        "release_date": "2024-12-20",
+        "genre": "Sci-Fi, Adventure",
+        "director": "James Cameron"
+    },
+    {
+        "title": "John Wick: Chapter 4",
+        "release_date": "2024-03-22",
+        "genre": "Action, Thriller",
+        "director": "Chad Stahelski"
+    },
+    {
+        "title": "Fast X",
+        "release_date": "2024-05-19",
+        "genre": "Action, Thriller",
+        "director": "Louis Leterrier"
+    },
+    {
+        "title": "Mission: Impossible - Dead Reckoning Part One",
+        "release_date": "2024-07-12",
+        "genre": "Action, Thriller",
+        "director": "Christopher McQuarrie"
+    },
+    {
+        "title": "The Hunger Games: The Ballad of Songbirds and Snakes",
+        "release_date": "2024-11-17",
+        "genre": "Sci-Fi, Adventure",
+        "director": "Francis Lawrence"
+    },
+    {
+        "title": "Spider-Man: Across the Spider-Verse (Part One)",
+        "release_date": "2024-06-21",
+        "genre": "Animation, Action, Adventure",
+        "director": "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson"
+    },
+    {
+        "title": "Godzilla x Kong: The New Empire",
+        "release_date": "2024-03-15",
+        "genre": "Sci-Fi, Action, Adventure",
+        "director": "Adam Wingard"
+    },
+    {
+        "title": "The Marvels",
+        "release_date": "2024-07-26",
+        "genre": "Sci-Fi, Action, Adventure",
+        "director": "Nia DaCosta"
+    },
+    {
+        "title": "Blade",
+        "release_date": "2024-09-06",
+        "genre": "Action, Horror",
+        "director": "Bassam Tariq"
+    },
+    {
+        "title": "Dungeons & Dragons: Honor Among Thieves",
+        "release_date": "2024-03-01",
+        "genre": "Fantasy, Adventure, Comedy",
+        "director": "Jonathan Goldstein, John Francis Daley"
+    },
+    {
+        "title": "The Little Mermaid",
+        "release_date": "2024-05-24",
+        "genre": "Fantasy, Musical",
+        "director": "Rob Marshall"
+    },
+    {
+        "title": "Wicked: Part One",
+        "release_date": "2024-11-27",
+        "genre": "Fantasy, Musical",
+        "director": "Jon M. Chu"
+    },
+    {
+        "title": "Scream VI",
+        "release_date": "2024-03-14",
+        "genre": "Horror, Mystery",
+        "director": "Matt Bettinelli-Olpin, Tyler Gillett"
+    },
+    {
+        "title": "The Exorcist: Believer",
+        "release_date": "2024-10-13",
+        "genre": "Horror",
+        "director": "David Gordon Green"
+    },
+    {
+        "title": "The Boogeyman",
+        "release_date": "2024-06-02",
+        "genre": "Horror",
+        "director": "Rob Savage"
+    },
+    {
+        "title": "Borderlands",
+        "release_date": "2024-08-09",
+        "genre": "Action, Sci-Fi, Adventure",
+        "director": "Eli Roth"
+    },
+    {
+        "title": "The Fall Guy",
+        "release_date": "2024-07-19",
+        "genre": "Action, Comedy",
+        "director": "McG"
+    },
+    {
+        "title": "Challengers",
+        "release_date": "2024-09-15",
+        "genre": "Drama, Romance, Comedy",
+        "director": "Luca Guadagnino"
+    },
+    {
+        "title": "The Killer",
+        "release_date": "2024-11-13",
+        "genre": "Action, Thriller",
+        "director": "David Fincher"
+    },
+    {
+        "title": "Napoleon",
+        "release_date": "2024-11-22",
+        "genre": "Biography, Drama, War",
+        "director": "Ridley Scott"
+    },
+    {
+        "title": "Killers of the Flower Moon",
+        "release_date": "2024-10-25",
+        "genre": "Crime, Drama, Western",
+        "director": "Martin Scorsese"
+    },
+    {
+        "title": "Joker: Folie à Deux",
+        "release_date": "2024-10-04",
+        "genre": "Psychological Thriller",
+        "director": "Todd Phillips"
+    },
+    {
+        "title": "Dune: Part Two",
+        "release_date": "2024-11-15",
+        "genre": "Sci-Fi, Adventure",
+        "director": "Denis Villeneuve"
+    },
+    {
+        "title": "Avatar: The Way of Water",
+        "release_date": "2024-12-20",
+        "genre": "Sci-Fi, Adventure",
+        "director": "James Cameron"
+    },
+    {
+        "title": "John Wick: Chapter 4",
+        "release_date": "2024-03-22",
+        "genre": "Action, Thriller",
+        "director": "Chad Stahelski"
+    },
+    {
+        "title": "Fast X",
+        "release_date": "2024-05-19",
+        "genre": "Action, Thriller",
+        "director": "Louis Leterrier"
+    },
+    {
+        "title": "Mission: Impossible - Dead Reckoning Part One",
+        "release_date": "2024-07-12",
+        "genre": "Action, Thriller",
+        "director": "Christopher McQuarrie"
+    },
+    {
+        "title": "The Hunger Games: The Ballad of Songbirds and Snakes",
+        "release_date": "2024-11-17",
+        "genre": "Sci-Fi, Adventure",
+        "director": "Francis Lawrence"
+    },
+    {
+        "title": "Spider-Man: Across the Spider-Verse (Part One)",
+        "release_date": "2024-06-21",
+        "genre": "Animation, Action, Adventure",
+        "director": "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson"
+    },
+    {
+        "title": "Godzilla x Kong: The New Empire",
+        "release_date": "2024-03-15",
+        "genre": "Sci-Fi, Action, Adventure",
+        "director": "Adam Wingard"
+    },
+    {
+        "title": "The Marvels",
+        "release_date": "2024-07-26",
+        "genre": "Sci-Fi, Action, Adventure",
+        "director": "Nia DaCosta"
+    },
+    {
+        "title": "Blade",
+        "release_date": "2024-09-06",
+        "genre": "Action, Horror",
+        "director": "Bassam Tariq"
+    },
+    {
+        "title": "Indiana Jones and the Dial of Destiny",
+        "release_date": "2024-06-30",
+        "genre": "Action, Adventure",
+        "director": "James Mangold"
+    },
+    {
+        "title": "Dungeons & Dragons: Honor Among Thieves",
+        "release_date": "2024-03-01",
+        "genre": "Fantasy, Adventure, Comedy",
+        "director": "Jonathan Goldstein, John Francis Daley"
+    },
+    {
+        "title": "The Little Mermaid",
+        "release_date": "2024-05-24",
+        "genre": "Fantasy, Musical",
+        "director": "Rob Marshall"
+    },
+    {
+        "title": "Wicked: Part One",
+        "release_date": "2024-11-27",
+        "genre": "Fantasy, Musical",
+        "director": "Jon M. Chu"
+    },
+    {
+        "title": "Scream VI",
+        "release_date": "2024-03-14",
+        "genre": "Horror, Mystery",
+        "director": "Matt Bettinelli-Olpin, Tyler Gillett"
+    },
+    {
+        "title": "The Exorcist: Believer",
+        "release_date": "2024-10-13",
+        "genre": "Horror",
+        "director": "David Gordon Green"
+    },
+    {
+        "title": "The Boogeyman",
+        "release_date": "2024-06-02",
+        "genre": "Horror",
+        "director": "Rob Savage"
+    },
+    {
+        "title": "Borderlands",
+        "release_date": "2024-08-09",
+        "genre": "Action, Sci-Fi, Adventure",
+        "director": "Eli Roth"
+    },
+    {
+        "title": "The Fall Guy",
+        "release_date": "2024-07-19",
+        "genre": "Action, Comedy",
+        "director": "McG"
+    },
+    {
+        "title": "Challengers",
+        "release_date": "2024-09-15",
+        "genre": "Drama, Romance, Comedy",
+        "director": "Luca Guadagnino"
+    },
+    {
+        "title": "The Killer",
+        "release_date": "2024-11-13",
+        "genre": "Action, Thriller",
+        "director": "David Fincher"
+    },
+    {
+        "title": "Napoleon",
+        "release_date": "2024-11-22",
+        "genre": "Biography, Drama, War",
+        "director": "Ridley Scott"
+    }
+]
