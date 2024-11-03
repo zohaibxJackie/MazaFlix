@@ -69,6 +69,10 @@ a {
     background: var(--primary-red-hover);
 }
 
+.explore-btn:hover {
+    color: white !important;
+}
+
 header {
     display: flex;
     justify-content: space-between;

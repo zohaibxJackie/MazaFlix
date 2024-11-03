@@ -4,7 +4,7 @@ const Main = () => {
     <main>
         <h1>Explore the world of movies</h1>
         <p>Search for movies you like or pick a random movie.</p>
-        <div><button className='btn'><Link to={'/Search-For-Movies'}>Explor Now</Link></button></div>
+        <div><button className='btn'><Link to={'/Search-For-Movies'} className="explore-btn">Explore Now</Link></button></div>
     </main>
   )
 }
