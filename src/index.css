@@ -149,6 +149,8 @@ main h1 {
     backdrop-filter: blur(10px);
     border-radius: 10px;
     overflow: hidden;
+    /* The following line is only for main page when the user clicks on the image of the movie */
+    margin-inline: auto; 
 }
 
 .title {
@@ -168,7 +170,6 @@ main h1 {
 }
 
 .cart img {
-    max-width: 100%;
     width: 300px;
 }
 
@@ -237,3 +238,45 @@ main h1 {
 #search::-webkit-calendar-picker-indicator {
     display: none;
 }
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.poster {
+    min-width: fit-content;
+    height: 15rem;
+    cursor: pointer;
+}
+/* Style for the modal-like View component */
+.m-p-details {
+    position: fixed; 
+    justify-content: center;
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
+    padding: 20px; 
+    width: 100%;
+    max-width: 90%; 
+    overflow: auto; 
+    transition: opacity 0.3s ease; 
+    opacity: 1; 
+  }
+  
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start; 
+  }
+  

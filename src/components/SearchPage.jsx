@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { Circles } from 'react-loader-spinner';
+import View from "./View";
 
 const SearchPage = () => {
     const [loading, setLoading] = useState(false);
@@ -79,17 +80,15 @@ const SearchPage = () => {
                     </div>
                 ) : movie ? (
                     movie.Response === 'True' ? (
-                        <div className='cart'>
-                            <img src={movie.Poster} alt="Movie Poster" />
-                            <div className='cart-details'>
-                                <p className="title">{movie.Title}</p>
-                                <p><span>Genre:</span> {movie.Genre}</p>
-                                <p><span>Released on:</span> {movie.Released}</p>
-                                <p><span>Time:</span> {movie.Runtime}</p>
-                                <p><span>Box Office:</span> {movie.BoxOffice}</p>
-                                <p><span>Plot:</span> {movie.Plot}</p>
-                            </div>
-                        </div>
+                        <View
+                        Poster={movie.Poster}
+                        Title={movie.Title}
+                        Genre={movie.Genre}
+                        Released={movie.Released}
+                        Runtime={movie.Runtime}
+                        BoxOffice={movie.BoxOffice}
+                        Plot={movie.Plot}
+                    />
                     ) : (
                         <p>No movie found. Please try again.</p>
                     )
