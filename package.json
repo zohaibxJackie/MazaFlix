@@ -2,7 +2,7 @@
   "homepage": "https://github.com/zohaibxJackie/MazaFlix",
   "name": "movie-db-searching-app",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

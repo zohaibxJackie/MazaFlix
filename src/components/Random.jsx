@@ -27,7 +27,7 @@ const Random = () => {
                 }
             })
             .catch(error => {
-                console.error('Fetch error:', error);
+                // console.error('Fetch error:', error);
                 setMovie(null);
             })
             .finally(() => setLoading(false));

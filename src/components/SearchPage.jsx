@@ -33,7 +33,7 @@ const SearchPage = () => {
                 }
             })
             .catch(error => {
-                console.error('Something went wrong', error);
+                // console.error('Something went wrong', error);
                 setMovie({ Response: 'False' });
             })
             .finally(() => setLoading(false));

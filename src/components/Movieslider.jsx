@@ -15,7 +15,7 @@ const Movieslider = ({ Data, title, showMovieDetails }) => {
             try {
                 const promises = Data.map(async (e) => {
                     const response = await fetch(`https://www.omdbapi.com/?i=${apiNo}&apikey=${api}&t=${e.title}`);
-                    if (!response.ok) throw new Error('Network response was not ok');
+                    if (!response.ok) throw new Error('Something went wrong');
                     const result = await response.json();
                     return result;
                 });
@@ -23,7 +23,7 @@ const Movieslider = ({ Data, title, showMovieDetails }) => {
                 const results = await Promise.all(promises);
                 setMovieData(results.filter(movie => movie.Response !== "False" && movie.Poster && movie.Poster !== "N/A"));
             } catch (error) {
-                console.error("Error fetching movie data:", error);
+                console.error("Something went wrong :(");
             }
         };
 
