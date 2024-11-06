@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import View from './View';
 import featuringData from '../assets/datafrontpage.json';
 import Movieslider from './Movieslider';
-import romanticData from '../assets/romantic.json'
+import Genreslider from './Genreslider';
 
 const Main = () => {
   const [selectedMovie, setSelectedMovie] = useState(null); // State for the selected movie
@@ -28,6 +28,22 @@ const Main = () => {
       {/* poster section */}
       <section className='category-wrapper'>
         <Movieslider Data={featuringData} showMovieDetails={showMovieDetails} title="Featuring" />
+        {/* Every category have a genre number in TMDB api */}
+        <Genreslider showMovieDetails={showMovieDetails} title="Crime" genre={80} />
+        <Genreslider showMovieDetails={showMovieDetails} title="Documentary" genre={99} />
+        <Genreslider showMovieDetails={showMovieDetails} title="Drama" genre={18} />
+        <Genreslider showMovieDetails={showMovieDetails} title="Family" genre={10751} />
+        <Genreslider showMovieDetails={showMovieDetails} title="Fantasy" genre={14} />
+        <Genreslider showMovieDetails={showMovieDetails} title="History" genre={36} />
+        <Genreslider showMovieDetails={showMovieDetails} title="Horror" genre={27} />
+        <Genreslider showMovieDetails={showMovieDetails} title="Music" genre={10402} />
+        <Genreslider showMovieDetails={showMovieDetails} title="Mystery" genre={9648} />
+        <Genreslider showMovieDetails={showMovieDetails} title="18+" genre={10749} />
+        <Genreslider showMovieDetails={showMovieDetails} title="Science Fiction" genre={878} />
+        <Genreslider showMovieDetails={showMovieDetails} title="TV Movie" genre={10770} />
+        <Genreslider showMovieDetails={showMovieDetails} title="Thriller" genre={53} />
+        <Genreslider showMovieDetails={showMovieDetails} title="War" genre={10752} />
+        <Genreslider showMovieDetails={showMovieDetails} title="Western" genre={37} />
       </section>
 
 
@@ -40,13 +56,12 @@ const Main = () => {
         {
           show && selectedMovie && (
             <View
-              Poster={selectedMovie.Poster}
-              Title={selectedMovie.Title}
-              Genre={selectedMovie.Genre}
-              Released={selectedMovie.Released}
-              Runtime={selectedMovie.Runtime}
+              Poster={selectedMovie.poster_path}
+              Title={selectedMovie.title}
+              Genre={'This feature will come soon'}
+              Released={selectedMovie.release_date}
               BoxOffice={selectedMovie.BoxOffice}
-              Plot={selectedMovie.Plot}
+              Plot={selectedMovie.overview}
             />
           )
         }

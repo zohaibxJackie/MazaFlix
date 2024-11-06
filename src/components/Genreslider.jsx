@@ -4,37 +4,29 @@ import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 
-const Movieslider = ({ Data, title, showMovieDetails }) => {
+const Genreslider = ({ genre, title, showMovieDetails }) => {
     const [movieData, setMovieData] = useState([]);
 
     const tmdb = import.meta.env.VITE_TMDB_API_KEY;
 
-    const TMDB_BASE_URL = 'https://api.themoviedb.org/3/search/movie?query';
+    const GENRE_BASE_URL = 'https://api.themoviedb.org/3/discover/movie?api_key=';
     const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500/';
 
     useEffect(() => {
         const fetchMovies = async () => {
             try {
-                const promises = Data.map(async (e) => {
-                    const response = await fetch(`${TMDB_BASE_URL}=${e.title}&api_key=${tmdb}`);
-                    
-                    if (!response.ok) throw new Error('Something went wrong');
-                    const result = await response.json();
-                    
-                    return result;
-                });
+                const response = await fetch(`${GENRE_BASE_URL}${tmdb}&with_genres=${genre}`);
+                if (!response.ok) throw new Error('Something went wrong');
+                const result = await response.json();
 
-                const results = await Promise.all(promises);
-                setMovieData(results.filter(movie => movie.results[0]));
-                // console.log("hello", results[0].results[0].poster_path);
-                
+                setMovieData(result.results); // Directly set the results array
             } catch (error) {
                 console.error("Something went wrong :(", error);
             }
         };
 
         fetchMovies();
-    }, [tmdb]);
+    }, [genre]);
 
 
     const breakpoints = {
@@ -73,22 +65,19 @@ const Movieslider = ({ Data, title, showMovieDetails }) => {
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 className="mySwiper"
             >
-                {
-                    movieData.map((movie, index) => (
-                        
-                        <SwiperSlide key={index}>
-                            <img
-                                src={movie.results[0].poster_path ? `${IMAGE_BASE_URL}${movie.results[0].poster_path}` : 'placeholder.jpg'}
-                                alt={movie.title}
-                                className='poster'
-                                onClick={() => showMovieDetails(movie.results[0])}
-                            />
-                        </SwiperSlide>
-                    ))
-                }
+                {movieData.map((movie, index) => (
+                    <SwiperSlide key={index}>
+                        <img
+                            src={movie.poster_path ? `${IMAGE_BASE_URL}${movie.poster_path}` : 'placeholder.jpg'}
+                            alt={movie.title || movie.name} // Fallback for title or name
+                            className='poster'
+                            onClick={() => showMovieDetails(movie)}
+                        />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     )
 }
 
-export default Movieslider
+export default Genreslider
