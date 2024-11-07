@@ -7,30 +7,30 @@ const Random = () => {
     const [movie, setMovie] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    const apiNo = import.meta.env.VITE_API_NUMBER;
-    const api = import.meta.env.VITE_API_KEY;
+    const tmdb = import.meta.env.VITE_TMDB_API_KEY;
+    const TMDB_BASE_URL = 'https://api.themoviedb.org/3/search/movie?query';
+    const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500/';
 
-    const fetchMovie = () => {
-        const randomIndex = Math.floor(Math.random() * data.length);
-        const randomMovie = data[randomIndex].title;
-        const url = `https://www.omdbapi.com/?i=${apiNo}&apikey=${api}&t=${randomMovie}`;
+    const fetchMovie = async () => {
+        try {
+            const randomIndex = Math.floor(Math.random() * data.length);
+            const randomMovie = data[randomIndex].title;
 
-        setLoading(true);
+            setLoading(true);
 
-        fetch(url)
-            .then(res => res.json())
-            .then(res => {
-                if (res.Response === "True") {
-                    setMovie(res);
-                } else {
-                    setMovie(null);
-                }
-            })
-            .catch(error => {
-                // console.error('Fetch error:', error);
-                setMovie(null);
-            })
-            .finally(() => setLoading(false));
+            const url = await fetch(`${TMDB_BASE_URL}=${randomMovie}&api_key=${tmdb}`);
+            const res = await url.json();
+            
+            if (res.results[0]) {
+                setMovie(res.results[0]);
+                setLoading(false);
+            } else {
+                setMovie({ Response: 'false' })
+            }
+
+        } catch (error) {
+            console.log('the error is', error);
+        }
     };
 
     useEffect(() => {
@@ -51,14 +51,13 @@ const Random = () => {
                 </div>
             ) : movie ? (
                 <View
-                    Poster={movie.Poster}
-                    Title={movie.Title}
-                    Genre={movie.Genre}
-                    Released={movie.Released}
-                    Runtime={movie.Runtime}
-                    BoxOffice={movie.BoxOffice}
-                    Plot={movie.Plot}
+                    Poster={movie.poster_path ? `${IMAGE_BASE_URL}${movie.poster_path}` : 'placeholder.jpg'}
+                    Title={movie.original_title}
+                    Genre={"coming soon"}
+                    Released={movie.release_date}
+                    Plot={movie.overview}
                     button={fetchMovie}
+
                 />
             ) : (
                 <p>Please wait for a while or refresh the page</p>

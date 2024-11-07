@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { Circles } from 'react-loader-spinner';
 import View from "./View";
@@ -6,38 +6,48 @@ import View from "./View";
 const SearchPage = () => {
     const [loading, setLoading] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-    const [movie, setMovie] = useState(null); // Initialize as null to indicate no search yet
+    const [movie, setMovie] = useState(null);
+    const [error, setError] = useState(null);  // For handling errors
 
-    const apiNo = import.meta.env.VITE_API_NUMBER;
-    const api = import.meta.env.VITE_API_KEY;
+    const tmdb = import.meta.env.VITE_TMDB_API_KEY;
+    const TMDB_BASE_URL = 'https://api.themoviedb.org/3/search/movie?query=';
+    const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500/';
 
-    const searchMovie = (e) => {
+    // Function to search for movies
+    const searchMovie = async (e) => {
         e.preventDefault();
 
         if (!searchQuery.trim()) {
-            // Reset movie state if input is empty
-            setMovie(null);
+            setMovie(null); // Reset movie state if input is empty
             return;
         }
 
         setLoading(true);
-        const url = `https://www.omdbapi.com/?i=${apiNo}&apikey=${api}&t=${searchQuery}`;
+        setError(null); // Reset any previous errors
 
-        fetch(url)
-            .then(res => res.json())
-            .then(res => {
-                if (res.Response === 'True') {
-                    setMovie(res);
-                } else {
-                    setMovie({ Response: 'False' }); // Indicate an invalid response
-                }
-            })
-            .catch(error => {
-                // console.error('Something went wrong', error);
-                setMovie({ Response: 'False' });
-            })
-            .finally(() => setLoading(false));
+        try {
+            const url = `${TMDB_BASE_URL}${searchQuery}&api_key=${tmdb}`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.results && data.results.length > 0) {
+                setMovie(data.results[0]);
+            } else {
+                setMovie(null); // No results found
+            }
+        } catch (err) {
+            setError('Failed to fetch movie data. Please try again later.');
+            console.error('Something went wrong');
+        } finally {
+            setLoading(false); // Always stop loading after the request finishes
+        }
     };
+
+    useEffect(() => {
+        if (searchQuery === '') {
+            setMovie(null); // Reset movie if query is cleared
+        }
+    }, [searchQuery]);
 
     return (
         <div className='search-page'>
@@ -53,6 +63,7 @@ const SearchPage = () => {
                         autoFocus
                     />
                     <datalist id="movie-suggestions">
+                        {/* Example suggestions */}
                         <option value="Inception" />
                         <option value="The Matrix" />
                         <option value="The Dark Knight" />
@@ -67,6 +78,7 @@ const SearchPage = () => {
                 </form>
                 <span><IoSearchSharp /></span>
             </div>
+
             <div className="movie-wrapper">
                 {loading ? (
                     <div className="loader">
@@ -78,22 +90,23 @@ const SearchPage = () => {
                             visible={true}
                         />
                     </div>
+                ) : error ? (
+                    <p>{error}</p>
                 ) : movie ? (
-                    movie.Response === 'True' ? (
-                        <View
-                        Poster={movie.Poster}
-                        Title={movie.Title}
-                        Genre={movie.Genre}
-                        Released={movie.Released}
-                        Runtime={movie.Runtime}
-                        BoxOffice={movie.BoxOffice}
-                        Plot={movie.Plot}
-                    />
-                    ) : (
+                    movie.Response === 'false' ? (
                         <p>No movie found. Please try again.</p>
+                    ) : (
+                        <View
+                            Poster={movie.poster_path ? `${IMAGE_BASE_URL}${movie.poster_path}` : 'placeholder.jpg'}
+                            Title={movie.original_title}
+                            Genre={"coming soon"}
+                            Released={movie.release_date}
+                            Plot={movie.overview}
+                        />
                     )
-                ) : null /* No message before a search */
-                }
+                ) : (
+                    <p>Enter a valid movie name to search.</p> 
+                )}
             </div>
         </div>
     );

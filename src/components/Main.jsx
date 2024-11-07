@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Footer from './Footer';
 import { Link } from "react-router-dom";
 import View from './View';
 import featuringData from '../assets/datafrontpage.json';
@@ -52,9 +53,9 @@ const Main = () => {
       {show && <div className='backdrop' onClick={() => setShow(false)} />}
 
       {/* Movie Details */}
-      <div className='m-p-details' onClick={() => setShow(false)}>
-        {
-          show && selectedMovie && (
+      {show && (
+        <div className='m-p-details' onClick={() => setShow(false)}>
+          {selectedMovie && (
             <View
               Poster={selectedMovie.poster_path}
               Title={selectedMovie.title}
@@ -63,9 +64,11 @@ const Main = () => {
               BoxOffice={selectedMovie.BoxOffice}
               Plot={selectedMovie.overview}
             />
-          )
-        }
-      </div>
+          )}
+        </div>
+      )}
+
+      <Footer />
     </>
   );
 
