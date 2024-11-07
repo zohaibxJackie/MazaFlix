@@ -16,6 +16,8 @@ const Random = () => {
             const randomIndex = Math.floor(Math.random() * data.length);
             const randomMovie = data[randomIndex].title;
 
+            console.log(randomMovie);
+
             setLoading(true);
 
             const url = await fetch(`${TMDB_BASE_URL}=${randomMovie}&api_key=${tmdb}`);
