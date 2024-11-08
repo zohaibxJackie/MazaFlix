@@ -102,10 +102,11 @@ const SearchPage = () => {
                             Genre={"coming soon"}
                             Released={movie.release_date}
                             Plot={movie.overview}
+                            id={movie.id}
                         />
                     )
                 ) : (
-                    <p>Enter a valid movie name to search.</p> 
+                    <p>Enter a valid movie name to search.</p>
                 )}
             </div>
         </div>

@@ -20,3 +20,5 @@ Thumbs.db       # Windows system file
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+secret.txt

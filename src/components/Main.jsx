@@ -10,6 +10,8 @@ const Main = () => {
   const [selectedMovie, setSelectedMovie] = useState(null); // State for the selected movie
   const [show, setShow] = useState(false);
 
+  const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500/'; // Base URL for poster images
+
   const showMovieDetails = (movie) => {
     setSelectedMovie(movie); // Set the selected movie
     setShow(true); // Show the details
@@ -57,12 +59,13 @@ const Main = () => {
         <div className='m-p-details' onClick={() => setShow(false)}>
           {selectedMovie && (
             <View
-              Poster={selectedMovie.poster_path}
+              Poster={selectedMovie.poster_path ? `${IMAGE_BASE_URL}${selectedMovie.poster_path}` : 'placeholder.jpg'}
               Title={selectedMovie.title}
               Genre={'This feature will come soon'}
               Released={selectedMovie.release_date}
               BoxOffice={selectedMovie.BoxOffice}
               Plot={selectedMovie.overview}
+              id={selectedMovie.id}
             />
           )}
         </div>

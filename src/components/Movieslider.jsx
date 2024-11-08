@@ -26,7 +26,6 @@ const Movieslider = ({ Data, title, showMovieDetails }) => {
 
                 const results = await Promise.all(promises);
                 setMovieData(results.filter(movie => movie.results[0]));
-                // console.log("hello", results[0].results[0].poster_path);
                 
             } catch (error) {
                 console.error("Something went wrong :(", error);

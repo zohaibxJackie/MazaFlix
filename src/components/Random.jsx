@@ -16,13 +16,12 @@ const Random = () => {
             const randomIndex = Math.floor(Math.random() * data.length);
             const randomMovie = data[randomIndex].title;
 
-            console.log(randomMovie);
 
             setLoading(true);
 
             const url = await fetch(`${TMDB_BASE_URL}=${randomMovie}&api_key=${tmdb}`);
             const res = await url.json();
-            
+
             if (res.results[0]) {
                 setMovie(res.results[0]);
                 setLoading(false);
@@ -31,7 +30,7 @@ const Random = () => {
             }
 
         } catch (error) {
-            console.log('the error is', error);
+            console.error('Something went wrong');
         }
     };
 
@@ -59,6 +58,7 @@ const Random = () => {
                     Released={movie.release_date}
                     Plot={movie.overview}
                     button={fetchMovie}
+                    id={movie.id}
 
                 />
             ) : (

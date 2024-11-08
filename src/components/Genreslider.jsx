@@ -1,10 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Circles } from 'react-loader-spinner';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 
 const Genreslider = ({ genre, title, showMovieDetails }) => {
+    const [loading, setLoading] = useState(true);
     const [movieData, setMovieData] = useState([]);
 
     const tmdb = import.meta.env.VITE_TMDB_API_KEY;
@@ -20,8 +22,10 @@ const Genreslider = ({ genre, title, showMovieDetails }) => {
                 const result = await response.json();
 
                 setMovieData(result.results); // Directly set the results array
+                setLoading(false);
             } catch (error) {
-                console.error("Something went wrong :(", error);
+                console.error("Something went wrong :(");
+                setLoading(true);
             }
         };
 
@@ -57,6 +61,17 @@ const Genreslider = ({ genre, title, showMovieDetails }) => {
             <div className='category-title'>
                 <p>{title}</p>
             </div>
+            {
+                loading && (<div className='loader'>
+                    <Circles
+                        height="80"
+                        width="80"
+                        color="#E50914"
+                        ariaLabel="circles-loading"
+                        visible={true}
+                    />
+                </div>)
+            }
             <Swiper
                 slidesPerView={1}
                 spaceBetween={0}
