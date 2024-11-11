@@ -18,7 +18,7 @@
 
 ### Basic-Idea
 
-The primary goal of this project is to create an engaging platform that offers personalized movie recommendations for users who are uncertain about what to watch next. Additionally, users can easily search for specific films to access detailed information about them. This project is personal and open-source, allowing anyone to contribute and enhance its features. There are no copyright restrictions, encouraging collaboration and creativity within the commu
+The primary goal of this project is to create an engaging platform that offers personalized movie recommendations for users who are uncertain about what to watch next. Additionally, users can easily search for specific films to access detailed information about them. This project is personal and open-source, allowing anyone to contribute and enhance its features. There are no copyright restrictions, encouraging collaboration and creativity within the community.
 
 ### Screenshot
 
