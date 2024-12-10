@@ -49,6 +49,9 @@ const SearchPage = () => {
         }
     }, [searchQuery]);
 
+    const searchItems = ["Inception", "The Matrix"];
+
+    
     return (
         <div className='search-page'>
             <div className="input-wrapper">
@@ -63,7 +66,6 @@ const SearchPage = () => {
                         autoFocus
                     />
                     <datalist id="movie-suggestions">
-                        {/* Example suggestions */}
                         <option value="Inception" />
                         <option value="The Matrix" />
                         <option value="The Dark Knight" />
